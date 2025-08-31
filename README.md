@@ -8,25 +8,48 @@
 BaskeChain/
 │
 ├── ethereum/         # Hardhat backend with smart contracts
-├── frontend/         # React-based frontend with Web3 integration
+├── frontend/         # Next.js + React frontend with Ethers.js integration
 └── README.md         # This file
 ```
 
 ---
 
-## 🔧 Technologies Used
+## 🔧 Tech Stack
 
-### Blockchain (Ethereum)
-- [Hardhat](https://hardhat.org/) – development environment and testing
-- [Solidity](https://soliditylang.org/) – smart contract language
-- [OpenZeppelin](https://docs.openzeppelin.com/contracts/) – for secure ERC20 and NFT implementation
-- [Ethers.js](https://docs.ethers.org/) – Web3 interaction from frontend
+### Blockchain
+- [Solidity](https://soliditylang.org/) – Smart contract language
+- [Hardhat](https://hardhat.org/) – Compile, test, and deploy contracts
+- [OpenZeppelin](https://docs.openzeppelin.com/contracts/) – Secure ERC20 & ERC721 base
+- [Ethers.js](https://docs.ethers.org/) – Contract interaction
+- Sepolia Testnet – Deployment environment
 
 ### Frontend
-- [React](https://react.dev/)
-- [Vite](https://vitejs.dev/) (or Create React App, depending on setup)
-- [Web3.js](https://web3js.readthedocs.io/) or Ethers.js – for blockchain interaction
-- [Metamask](https://metamask.io/) – wallet integration
+- [Next.js](https://nextjs.org/) – React framework
+- [React](https://react.dev/) – UI components
+- [TailwindCSS](https://tailwindcss.com/) + [ShadCN](https://ui.shadcn.com/) – Modern UI
+- [MetaMask](https://metamask.io/) – Wallet integration
+
+---
+
+## 🚀 Features
+
+- **PlayerNFT (ERC721):**
+  - Unique NFT per player
+  - Stores: name, age, height, salary request, image URI, and highlight video link
+- **BasketToken (ERC20):**
+  - Used by teams to sign players
+  - Initial allocation per team
+- **TeamManager Contract:**
+  - `createTeam(...)` → register a new team  
+  - `registerPlayer(...)` → mint a PlayerNFT  
+  - `signPlayer(...)` → team signs a player (ERC20 transfer + status update)  
+  - `releasePlayer(...)` → cancel a contract  
+  - `getTeamStatus(...)` → view roster + remaining budget
+- **Frontend (Next.js + Ethers.js):**
+  - Player and Team registration forms
+  - Display all players & teams
+  - Signing flow via MetaMask
+  - Team dashboards with signed players & budget
 
 ---
 
@@ -71,28 +94,8 @@ npm start
 
 ---
 
-## 📄 Smart Contract Summary
-
-### PlayerNFT (ERC721)
-- Unique NFT per player
-- Stores: name, age, height, salary request, position, image URI, and highlight video link
-
-### BasketToken (ERC20)
-- Team currency for signing players
-- Fixed initial supply for each team
-
-### TeamManager
-- `createTeam(...)` – Register a new team
-- `registerPlayer(...)` – Mint a new PlayerNFT
-- `signPlayer(...)` – Team signs a player using BasketToken
-- `releasePlayer(...)` – Cancel a signed contract
-- `getTeamStatus(...)` – Retrieve team budget and player list
-
----
-
 ## 🐞 Known Issues & Limitations
 
-See full list in the project presentation, but in brief:
 - Signature requests are not visible in player view yet
 - No ETH cost for creating teams/players (could be spammed)
 - Multi-account access (Metamask) has inconsistencies
@@ -103,13 +106,11 @@ See full list in the project presentation, but in brief:
 
 ## 📈 Future Improvements
 
-- Add ETH or token-based cost to create teams/players
-- Full role-based UI (player vs team)
-- Allow player to approve/reject signing requests
-- Better NFT metadata update & ownership control
-- Cleaner UX and error handling
-
----
+- Role-based UI (player vs. team dashboards)
+- Player-controlled signing approvals (two-step acceptance)
+- Add transaction cost for creating teams/players
+- Advanced governance mechanisms for team boards
+- Enhanced error handling & UX
 
 ## 📬 Contact
 
