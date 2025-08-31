@@ -111,7 +111,8 @@ npm start
 - Add transaction cost for creating teams/players
 - Advanced governance mechanisms for team boards
 - Enhanced error handling & UX
-
+  
+---
 ## 📬 Contact
 
 For any questions, feel free to reach out via email or GitHub issues.
