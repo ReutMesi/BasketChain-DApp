@@ -1,0 +1,26 @@
+{
+  "name": "signedin",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "test": "hardhat test",
+    "compile": "hardhat compile",
+    "clean": "hardhat clean",
+    "deploy": "hardhat ignition deploy ./ignition/modules/SignedInModule.js --network sepolia",
+    "local-deploy": "hardhat ignition deploy ./ignition/modules/SignedInModule.js --network localhost"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "devDependencies": {
+    "hardhat": "^2.26.1"
+  },
+  "dependencies": {
+    "@nomicfoundation/hardhat-toolbox": "^6.1.0",
+    "@openzeppelin/contracts": "^5.4.0",
+    "dotenv": "^17.2.1",
+    "ethers": "^6.15.0",
+    "web3": "^4.16.0"
+  }
+}

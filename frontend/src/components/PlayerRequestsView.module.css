@@ -1,0 +1,35 @@
+.requestsSection {
+  padding: 1rem;
+  border-top: 1px solid #e5e7eb;
+}
+
+.heading {
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin-bottom: 1rem;
+  color: #4338ca;
+}
+
+.loading {
+  font-style: italic;
+  color: #6b7280;
+}
+
+.empty {
+  color: #9ca3af;
+}
+
+.list {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  padding-left: 0;
+  list-style: none;
+}
+
+.item {
+  border: 1px solid #e5e7eb;
+  border-radius: 8px;
+  padding: 1rem;
+  background: #f9fafb;
+}

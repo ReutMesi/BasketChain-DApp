@@ -1,0 +1,90 @@
+.page-container {
+  min-height: 100vh;
+  background-color: #f9fafb;
+  padding: 64px 16px;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.page-wrapper {
+  max-width: 1024px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 64px;
+}
+
+.section-title {
+  font-size: 24px;
+  font-weight: bold;
+  color: #4338ca;
+  text-align: center;
+  margin-bottom: 32px;
+}
+
+.hero {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.hero-title {
+  font-size: 40px;
+  font-weight: 800;
+  color: #111827;
+}
+
+.hero-text {
+  font-size: 18px;
+  color: #4b5563;
+  max-width: 512px;
+  margin: 0 auto;
+}
+
+.grid-layout {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+  gap: 24px;
+  padding-top: 12px;
+}
+
+.no-data-text {
+  color: #6b7280;
+  font-style: italic;
+  text-align: center;
+  margin-top: 12px;
+}
+
+.actionButton {
+  padding: 12px 24px;
+  background-color: #4f46e5;
+  color: white;
+  font-size: 16px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.actionButton:hover {
+  background-color: #4338ca;
+}
+.section-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 24px;
+}
+.requestButtonContainer {
+  display: flex;
+  justify-content: flex-end;
+  margin-top: 10px;
+}
+.heroBanner {
+  background-color: #e0e7ff; /* כחול בהיר - Tailwind indigo-100 */
+  border-radius: 12px;
+  padding: 48px 24px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+}
+
+

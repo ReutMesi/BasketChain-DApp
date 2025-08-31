@@ -1,0 +1,14 @@
+.ownerButton {
+  background-color: #4338ca;
+  color: white;
+  border: none;
+  padding: 12px 20px;
+  border-radius: 8px;
+  font-weight: bold;
+  cursor: pointer;
+  margin-top: 16px;
+}
+
+.ownerButton:hover {
+  background-color: #3730a3;
+}
